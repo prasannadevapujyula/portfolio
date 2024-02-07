@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>about</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="aboutimg.jpeg">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="subtitle">About me</h1>
+                    <p>Hello there! I'm an enthusiastic Electronics and Communication student with a solid academic foundation,
+                         boasting an impressive 8.11 CGPA. My passion for technology extends beyond the classroom, as I am well-versed
+                          in web development technologies, including HTML, CSS, and JavaScript. Crafting visually
+                         appealing and functional websites is my forte. Additionally, I've delved into the fundamentals of 
+                         Python, adding versatility to my skill set. My journey in the realm of Electronics and Communication 
+                         has equipped me with problem-solving abilities and a keen eye for detail, qualities that seamlessly 
+                         translate into my approach to coding. With a knack for blending creativity and functionality, 
+                         I am committed to delivering engaging digital experiences. Join me on this exciting journey 
+                         as I continue to bridge the gap between electronics and the digital world through my multifaceted 
+                         skills in web development.</p>
+                         <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('Education')">Education </p>
+                            <p class="tab-links" onclick="opentab('Internship')">Internship</p>
+                            <p class="tab-links" onclick="opentab('Certifications')">Certifications</p>
+                            <p class="tab-links" onclick="opentab('other activities')">Other activities</p>
+
+                         </div>
+                         <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>Web development</span><br> can develop web pages</li>
+                                <li><span>Python</span><br> basic understanding</li>
+                                <li><span>Internet of things</span><br> able to manage the devices</li>
+                            </ul>
+                         </div>
+                         <div class="tab-contents" id="Education">
+                            <ul>
+                                <li><span>schooling-VIITTS</span><br> 2018- 10.00</li>
+                                <li><span>Intermediate-Vidhyanidhi junior college</span><br> 2020- 9.19 </li>
+                                <li><span>UG-GVPCDPGC</span><br> 2024- 8.11(upto 6th semester) </li>
+                            </ul>
+                         </div>
+
+                         <div class="tab-contents" id="Internship">
+                            <ul><li><span>Electronics maintainance Intern</span><br> Vishakapatnam Port Authority</li>
+                                <li><span>Web development Intern</span><br>Lapworkz</li>
+                            
+                            </ul>
+                         </div>
+
+                         
+                         <div class="tab-contents" id="Certifications">
+                            <ul><li><span>Web development</span><br>udemy</li>
+                                <li><span>Python</span><br> Microsoft</li>
+                                <li> <span>IOT and ES</span><br> Appleton</li>
+                            </ul>
+                         </div>
+
+                         
+                         <div class="tab-contents" id="other activities">
+                            <ul><li><span>Classical dance</span><br></li>
+                                <li><span>Embroidery</span><br></li>
+                                <li><span>Painting</span><br></li>
+                            </ul>
+                         </div>
+
+                        
+                        </div>
+                        
+                        </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <script>
+        var tablinks =document.getElementsByClassName("tab-links");
+        var tabcontents =document.getElementsByClassName("tab-contents");
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link");
+            }
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove("active-tab");
+            }
+            event.currentTarget.classList.add("active-link");
+            document.getElementById(tabname).classList.add("active-tab");
+            
+        }
+        
+        
+    </script>
+    
+    
+</body>
+</html>
